@@ -8,7 +8,7 @@ from flask_uploads import UploadSet, IMAGES
 IMAGE_SET = UploadSet("images", IMAGES)  # set name and allowed extensions
 
 
-def save_image(image: FileStorage, folder: str = None, name: str = None) -> str:
+def save_image(image, folder: str = None, name: str = None) -> str:
     return IMAGE_SET.save(image, folder, name)
 
 
